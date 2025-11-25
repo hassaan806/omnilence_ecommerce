@@ -1,0 +1,356 @@
+// Menu definition curated for the streamlined admin experience.
+export const MENU_ITEMS = [{
+  key: 'general',
+  label: 'GENERAL',
+  isTitle: true
+}, {
+  key: 'dashboard',
+  label: 'Dashboard',
+  icon: 'solar:widget-5-bold-duotone',
+  url: '/dashboard'
+}, {
+  key: 'products',
+  label: 'Products',
+  icon: 'solar:t-shirt-bold-duotone',
+  children: [{
+    key: 'product-list',
+    label: 'List',
+    url: '/products/product-list',
+    parentKey: 'products'
+  }, {
+    key: 'product-grid',
+    label: 'Grid',
+    url: '/products/product-grid',
+    parentKey: 'products'
+  }, {
+    key: 'product-details',
+    label: 'Details',
+    url: '/products/1',
+    parentKey: 'products'
+  }, {
+    key: 'product-edit',
+    label: 'Edit',
+    url: '/products/product-edit',
+    parentKey: 'products'
+  }, {
+    key: 'product-add',
+    label: 'Create',
+    url: '/products/product-add',
+    parentKey: 'products'
+  }]
+}, {
+  key: 'category',
+  label: 'Category',
+  icon: 'solar:clipboard-list-bold-duotone',
+  children: [{
+    key: 'category-list',
+    label: 'List',
+    url: '/category/category-list',
+    parentKey: 'category'
+  }, {
+    key: 'category-edit',
+    label: 'Edit',
+    url: '/category/category-edit',
+    parentKey: 'category'
+  }, {
+    key: 'category-add',
+    label: 'Create',
+    url: '/category/category-add',
+    parentKey: 'category'
+  }]
+}, {
+  key: 'inventory',
+  label: 'Inventory',
+  icon: 'solar:box-bold-duotone',
+  children: [{
+    key: 'received-orders',
+    label: 'Received Orders',
+    url: '/inventory/received-orders',
+    parentKey: 'inventory'
+  }, {
+    key: 'warehouse',
+    label: 'Warehouse',
+    url: '/inventory/warehouse',
+    parentKey: 'inventory'
+  }]
+}, {
+  key: 'orders',
+  label: 'Orders',
+  icon: 'solar:bag-smile-bold-duotone',
+  children: [{
+    key: 'orders-list',
+    label: 'List',
+    url: '/orders/orders-list',
+    parentKey: 'orders'
+  }, {
+    key: 'order-detail',
+    label: 'Detail',
+    url: '/orders/order-detail',
+    parentKey: 'orders'
+  }, {
+    key: 'order-cart',
+    label: 'Cart',
+    url: '/orders/order-cart',
+    parentKey: 'orders'
+  }, {
+    key: 'order-checkout',
+    label: 'Checkout',
+    url: '/orders/order-checkout',
+    parentKey: 'orders'
+  }]
+}, {
+  key: 'purchases',
+  label: 'Purchases',
+  icon: 'solar:card-send-bold-duotone',
+  children: [{
+    key: 'purchase-list',
+    label: 'List',
+    url: '/purchases/purchase-list',
+    parentKey: 'purchases'
+  }, {
+    key: 'purchase-order',
+    label: 'Order',
+    url: '/purchases/purchase-order',
+    parentKey: 'purchases'
+  }, {
+    key: 'purchase-returns',
+    label: 'Returns',
+    url: '/purchases/purchase-returns',
+    parentKey: 'purchases'
+  }]
+}, {
+  key: 'attributes',
+  label: 'Attributes',
+  icon: 'solar:confetti-minimalistic-bold-duotone',
+  children: [{
+    key: 'attributes-list',
+    label: 'List',
+    url: '/attributes/attributes-list',
+    parentKey: 'attributes'
+  }, {
+    key: 'attributes-edit',
+    label: 'Edit',
+    url: '/attributes/attributes-edit',
+    parentKey: 'attributes'
+  }, {
+    key: 'attributes-add',
+    label: 'Create',
+    url: '/attributes/attributes-add',
+    parentKey: 'attributes'
+  }]
+}, {
+  key: 'invoice',
+  label: 'Invoices',
+  icon: 'solar:bill-list-bold-duotone',
+  children: [{
+    key: 'invoice-list',
+    label: 'List',
+    url: '/invoice/invoice-list',
+    parentKey: 'invoice'
+  }, {
+    key: 'invoice-details',
+    label: 'Details',
+    url: '/invoice/invoice-details',
+    parentKey: 'invoice'
+  }, {
+    key: 'invoice-add',
+    label: 'Create',
+    url: '/invoice/invoice-add',
+    parentKey: 'invoice'
+  }]
+}, {
+  key: 'settings',
+  label: 'Settings',
+  icon: 'solar:settings-bold-duotone',
+  url: '/settings'
+}, {
+  key: 'users',
+  label: 'USERS',
+  isTitle: true
+}, {
+  key: 'profile',
+  label: 'Profile',
+  icon: 'solar:chat-square-like-bold-duotone',
+  url: '/profile'
+}, {
+  key: 'role',
+  label: 'Roles',
+  icon: 'solar:user-speak-rounded-bold-duotone',
+  children: [{
+    key: 'role-list',
+    label: 'List',
+    url: '/role/role-list',
+    parentKey: 'role'
+  }, {
+    key: 'role-edit',
+    label: 'Edit',
+    url: '/role/role-edit',
+    parentKey: 'role'
+  }, {
+    key: 'role-add',
+    label: 'Create',
+    url: '/role/role-add',
+    parentKey: 'role'
+  }]
+}, {
+  key: 'permissions',
+  label: 'Permissions',
+  icon: 'solar:checklist-minimalistic-bold-duotone',
+  url: '/permissions'
+}, {
+  key: 'customer',
+  label: 'Customers',
+  icon: 'solar:users-group-two-rounded-bold-duotone',
+  children: [{
+    key: 'customer-list',
+    label: 'List',
+    url: '/customer/customer-list',
+    parentKey: 'customer'
+  }, {
+    key: 'customer-detail',
+    label: 'Details',
+    url: '/customer/customer-detail',
+    parentKey: 'customer'
+  }]
+}, {
+  key: 'seller',
+  label: 'Sellers',
+  icon: 'solar:shop-bold-duotone',
+  children: [{
+    key: 'seller-list',
+    label: 'List',
+    url: '/seller/seller-list',
+    parentKey: 'seller'
+  }, {
+    key: 'seller-details',
+    label: 'Details',
+    url: '/seller/seller-details',
+    parentKey: 'seller'
+  }, {
+    key: 'seller-edit',
+    label: 'Edit',
+    url: '/seller/seller-edit',
+    parentKey: 'seller'
+  }, {
+    key: 'seller-add',
+    label: 'Create',
+    url: '/seller/seller-add',
+    parentKey: 'seller'
+  }]
+}, {
+  key: 'other',
+  label: 'OTHER',
+  isTitle: true
+}, {
+  key: 'coupons',
+  label: 'Coupons',
+  icon: 'solar:leaf-bold-duotone',
+  children: [{
+    key: 'coupons-list',
+    label: 'List',
+    url: '/coupons/coupons-list',
+    parentKey: 'coupons'
+  }, {
+    key: 'coupons-add',
+    label: 'Add',
+    url: '/coupons/coupons-add',
+    parentKey: 'coupons'
+  }]
+}, {
+  key: 'review',
+  label: 'Review',
+  icon: 'solar:chat-square-like-bold-duotone',
+  url: '/review'
+}, {
+  key: 'other-apps',
+  label: 'OTHER APPS',
+  isTitle: true
+}, {
+  key: 'apps-chat',
+  label: 'Chat',
+  icon: 'solar:chat-round-bold-duotone',
+  url: '/apps/chat'
+}, {
+  key: 'apps-email',
+  label: 'Email',
+  icon: 'solar:mailbox-bold-duotone',
+  url: '/apps/email'
+}, {
+  key: 'apps-calendar',
+  label: 'Calendar',
+  icon: 'solar:calendar-bold-duotone',
+  url: '/apps/calendar'
+}, {
+  key: 'apps-todo',
+  label: 'Todo',
+  icon: 'solar:checklist-bold-duotone',
+  url: '/apps/todo'
+}, {
+  key: 'support',
+  label: 'SUPPORT',
+  isTitle: true
+}, {
+  key: 'help-center',
+  label: 'Help-Center',
+  icon: 'solar:help-bold-duotone',
+  url: '/support/help-center'
+}, {
+  key: 'faqs',
+  label: 'FAQs',
+  icon: 'solar:question-circle-bold-duotone',
+  url: '/support/faqs'
+}, {
+  key: 'privacy-policy',
+  label: 'Privacy Policy',
+  icon: 'solar:document-text-bold-duotone',
+  url: '/support/privacy-policy'
+}, {
+  key: 'custom',
+  label: 'CUSTOM',
+  isTitle: true
+}, {
+  key: 'pages',
+  label: 'Pages',
+  icon: 'solar:gift-bold-duotone',
+  children: [{
+    key: 'welcome',
+    label: 'Welcome',
+    url: '/pages/welcome',
+    parentKey: 'pages'
+  }, {
+    key: 'timeline',
+    label: 'Timeline',
+    url: '/pages/timeline',
+    parentKey: 'pages'
+  }, {
+    key: 'pricing',
+    label: 'Pricing',
+    url: '/pages/pricing',
+    parentKey: 'pages'
+  }, {
+    key: 'pages-404-alt',
+    label: '404 Error (Alt)',
+    url: '/pages/pages-404-alt',
+    parentKey: 'pages'
+  }]
+}, {
+  key: 'auth',
+  label: 'Authentication',
+  icon: 'solar:lock-keyhole-bold-duotone',
+  children: [{
+    key: 'sign-in',
+    label: 'Sign In',
+    url: '/auth/sign-in',
+    parentKey: 'auth'
+  }, {
+    key: 'sign-up',
+    label: 'Sign Up',
+    url: '/auth/sign-up',
+    parentKey: 'auth'
+  }, {
+    key: 'password',
+    label: 'Reset Password',
+    url: '/auth/reset-pass',
+    parentKey: 'auth'
+  }]
+}];

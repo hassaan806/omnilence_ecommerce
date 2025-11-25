@@ -1,0 +1,80 @@
+# ============================================
+# Next.js / Node.js / TypeScript .gitignore
+# ============================================
+
+# Node modules
+node_modules/
+bun.lockb
+.pnp
+.pnp.js
+
+# Next.js build output
+.next/
+out/
+dist/
+build/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Local development
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
+
+# Debugging files
+**/*.log
+ logs/
+*.pid
+*.seed
+*.pid.lock
+
+# Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+.cache/
+.parcel-cache/
+
+# Production bundles (we upload via CI/CD, not Git)
+public/uploads/
+public/storage/
+
+# Next.js specific
+*.next/
+.next/
+.next/cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
+*.lcov
+
+# Local history (your project has .history folder)
+.history/
+
+# Lock files (you are using yarn — keep yarn.lock)
+package-lock.json
+pnpm-lock.yaml
+
+# Misc
+.env.local
+.env.production
+.env.development
+
+# Storybook (if included)
+storybook-static/
