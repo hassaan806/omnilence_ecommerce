@@ -7,20 +7,31 @@ import { Row } from 'react-bootstrap';
 import { getProductById } from '@/helpers/data';
 import { notFound } from 'next/navigation';
 import PageTItle from '@/components/PageTItle';
-export const generateMetadata = async ({
-  params
-}) => {
+
+// For static export, we need to define which product IDs to generate
+export async function generateStaticParams() {
+  // In a real app, you would fetch all product IDs
+  // For this demo, we'll use the IDs from 1 to 12
+  const productIds = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+  
+  return productIds.map((id) => ({
+    productId: id,
+  }));
+}
+
+export const generateMetadata = async ({ params }) => {
   const product = await getProductById(params.productId);
   return {
     title: product?.id ?? 'Product Details'
   };
 };
-const ProductDetailsPage = async ({
-  params
-}) => {
+
+const ProductDetailsPage = async ({ params }) => {
   const product = await getProductById(params.productId);
   if (!product) notFound();
-  return <>
+  
+  return (
+    <>
       <PageTItle title="PRODUCT DETAILS" />
       <ProductDetails />
       <Step />
@@ -28,6 +39,8 @@ const ProductDetailsPage = async ({
         <ItemDetails />
         <Review />
       </Row>
-    </>;
+    </>
+  );
 };
+
 export default ProductDetailsPage;

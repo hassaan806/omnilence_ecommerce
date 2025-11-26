@@ -115,6 +115,19 @@ export const getAllTasks = async () => {
   return data;
 };
 
+// Email helper functions
+export const getEmailsCategoryCount = async () => {
+  // Count emails by category for the email app
+  return {
+    inbox: emailsData.filter(email => email.toId === '101' && !email.deleted).length,
+    starred: emailsData.filter(email => email.starred).length,
+    draft: emailsData.filter(email => email.draft).length,
+    sent: emailsData.filter(email => email.fromId === '101').length,
+    deleted: emailsData.filter(email => email.deleted).length,
+    important: emailsData.filter(email => email.important).length
+  };
+};
+
 export const serverSideFormValidate = async (data) => {
   const formSchema = yup.object({
     fName: yup.string().min(3, 'First name should have at least 3 characters').max(50, 'First name should not be more than 50 characters').required('First name is required'),
